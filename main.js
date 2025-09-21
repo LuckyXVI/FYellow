@@ -1,5 +1,10 @@
 onload = () => {
     document.body.classList.remove("container");
+    function fixMobileHeight() {
+  document.body.style.minHeight = window.innerHeight + "px";
+}
+window.addEventListener("resize", fixMobileHeight);
+window.addEventListener("load", fixMobileHeight);
 
     const btn = document.getElementById("play-music");
     const audio = document.getElementById("bg-music");
